@@ -1,165 +1,86 @@
 <!DOCTYPE html>
-<html lang="pt-br">
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
+  <title>Feliz 1 Ano ❤️</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <link rel="stylesheet" href="style.css">
- <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
-  <title>Hamburgueria do Gabriel</title>
+  <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
-  <header> 
-    <a href="#" class="logo">GzBurger</a>
-    <nav>
-            <a href="#home">Início</a>
-            <a href="#cardapio">Cardápio</a>
-            <a href="#sobre">Sobre</a>
-            <a href="#contato">Contato</a>
-        </nav>
-        <a href="#cardapio" class="btn">Peça Agora</a>
-    </header>
 
-    <section id="home" class="hero-wrapper">
-        <article class="hero">
-            <div>
-                <h1>O Melhor Hamburguer da Cidade</h1>
-                <p>Ingredientes frescos, receitas especiais e entrega rápida. Peça agora e receba em até 40 minutos!</p>
-                <nav class="hero-buttons">
-                    <a href="#cardapio" class="btn">Ver cardápio</a>
-                    <a href="https://wa.me/5547997098456?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Gostaria%20de%20fazer%20um%20pedido!" class="btn btn-outline">📲 WhatsApp</a>
-                </nav>
-                <ul class="hero-stats">
-                    <li>
-                        <strong>+500</strong>
-                        Cliente felizes
-                    </li>
-                    <li>
-                        <strong>4.9</strong>
-                        Avaliação ⭐
-                    </li>
-                    <li>
-                        <strong>40min</strong>
-                        Tempo Máximo
-                    </li>
+<!-- 💌 MODAL -->
+<div id="modal">
+  <div class="modal-box">
+    <h2>💌 Uma mensagem pra você</h2>
+    <p>
+      Só para te lembrar que...<br>
+      eu te amo eternamente e sempre sera nós ❤️
+    </p>
+    <button onclick="abrirSite()">Abrir 💖</button>
+  </div>
+</div>
 
-                </ul>
-            </div>
+<!-- 🎵 BOTÃO -->
+<button class="music-btn" onclick="tocarMusica()">❤️ Música</button>
 
-            <img alt="hamburger"
-                src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?q=80&w=999&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
-        </article>
-    </section>
+<audio id="musica" loop>
+  <source src="musica.mp3" type="audio/mpeg">
+</audio>
 
-    <section id="cardapio" class="cardapio">
-        <h2>Nosso Cardápio</h2>
-        <p>Escolha seu favorito e faça seu pedido pelo WhatsApp</p>
+<!-- 🖼️ FUNDO -->
+<div id="background"></div>
 
+<!-- 📱 SEÇÕES -->
+<div class="section" data-img="img/foto1.jpeg">
+  <div class="content">
+    <h1>Nosso começo ❤️</h1>
+    <p id="contador"></p>
+  </div>
+</div>
 
-    <ul class="menu-grid">
-      <li>
-        <img src="https://images.unsplash.com/photo-1561758033-d89a9ad46330?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
-        <span class="badge">Mais Vendido</span>
-        <h3>Burger da Casa</h3>
-        <p>Pão Brioche, 180g de Carne, bacon crocante, queijo mussarela, cebola caramelizada, alface, tomate e molhos</p>
-        <strong>R$27,90</strong>
-        <a href="https://wa.me/5547997098456?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Gostaria%20de%20fazer%20um%20pedido!" class="btn">Pedir</a>
+<div class="section" data-img="img/foto2.jpeg">
+  <div class="content">
+    <h1>Momentos incríveis 💫</h1>
+<p>
+Cada risada, cada conversa,<br>
+cada momento ao seu lado<br>
+ficou guardado em mim.<br><br>
 
-          <li>
-        <img src="https://images.unsplash.com/photo-1605345981660-ab44e036a21d?q=80&w=1088&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
-        <h3>Burger do Chef</h3>
-        <p>Pão Brioche, 200g de Carne, bacon crocante, queijo cheddar, cebola caramelizada, alface, milho, pepino, tomate e molhos</p>
-        <strong>R$31,90</strong>
-        <a href="https://wa.me/5547997098456?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Gostaria%20de%20fazer%20um%20pedido!" class="btn">Pedir</a>
+Você transformou dias comuns<br>
+em memórias inesquecíveis.
+</p>
+  </div>
+</div>
 
-        <li>
-        <img src="https://images.unsplash.com/photo-1572802419224-296b0aeee0d9?q=80&w=1115&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
-        <h3>Burger Duplo</h3>
-        <p>Pão Brioche, 2x 180g de Carne, bacon crocante, queijo cheddar, cebola caramelizada, alface, tomate e molhos</p>
-        <strong>R$29,90</strong>
-        <a href="https://wa.me/5547997098456?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Gostaria%20de%20fazer%20um%20pedido!" class="btn">Pedir</a>
+<div class="section" data-img="img/foto3.jpeg">
+  <div class="content">
+    <h1>Eu e você 💕</h1>
+<p>
+Com você eu aprendi o que é amar de verdade.<br><br>
 
-        <li>
-        <img src="https://images.unsplash.com/photo-1643080294754-8769df746d33?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
-        <span class="badge">Novidade</span>
-        <h3>Burger Costela</h3>
-        <p>Pão Brioche, 200g de Costela, bacon crocante, queijo cheddar, cebola caramelizada, onion rings, alface, tomate e molhos</p>
-        <strong>R$34,90</strong>
-        <a href="https://wa.me/5547997098456?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Gostaria%20de%20fazer%20um%20pedido!" class="btn">Pedir</a>
+Não é só sobre momentos felizes…<br>
+mas sobre escolher você todos os dias.
+</p>
+  </div>
+</div>
 
-        <li>
-        <img src="https://images.unsplash.com/photo-1637710847214-f91d99669e18?q=80&w=721&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
-        <h3>Burger de Frango</h3>
-        <p>Pão Brioche, Frango, bacon crocante, queijo cheddar, cebola roxa, alface, tomate e molhos</p>
-        <strong>R$29,90</strong>
-        <a href="https://wa.me/5547997098456?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Gostaria%20de%20fazer%20um%20pedido!" class="btn">Pedir</a>
+<div class="section" data-img="img/foto4.jpg">
+  <div class="content">
+    <h1>1 ano juntos 🥺</h1>
+<p>
+1 ano pode parecer pouco…<br>
+mas com você, foi diferente.<br><br>
 
-        <li>
-        <img src="https://images.unsplash.com/photo-1630384060421-cb20d0e0649d?q=80&w=1025&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
-        <h3>Batata Frita</h3>
-        <p>500g de fritas</p>
-        <strong>R$21,90</strong>
-        <a href="https://wa.me/5547997098456?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Gostaria%20de%20fazer%20um%20pedido!" class="btn">Pedir</a>
+Obrigado por cada segundo,<br>
+por cada carinho,<br>
+por ser você.<br><br>
 
-        <li>
-        <img src="https://images.unsplash.com/photo-1610879977977-558431b6c054?q=80&w=687&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
-        <h3>Coca-Cola 250ml</h3>
-        <strong>R$5,90</strong>
-        <a href="https://wa.me/5547997098456?text=Ol%C3%A1%2C%20tudo%20bem%3F%20Gostaria%20de%20fazer%20um%20pedido!" class="btn">Pedir</a>
-      </li>
-    </ul>
+Eu te amo ❤️
+</p>
+  </div>
+</div>
 
-  </section>
-  
-  <section id="sobre" class="sobre">
-    <img src="https://images.unsplash.com/photo-1766232286705-3a32ffb73bde?q=80&w=627&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D">
-    <article>
-      <h2>Nossa Historia</h2>
-      <p>Desde 2020, a Hamburgueria do Gabriel nasceu da paixão por hambúrgueres artesenais.</p>
-      <ul>
-        <li>🥩 <strong>Carne Fresca</strong> - 100% bovina selecionada</li>
-        <li>🚀 <strong>Entrega Rápida</strong> - Máximo 40 minutos</li>
-        <li>💳 <strong>Pagamento Fácil</strong> - PIX, Cartão ou Dinheiro</li>
-      </ul>
-    </article>
-
-    <section id="contato" class="contato">
-    </section>
-
-    
-
-  </section>
-
-  <section id="cta" class="cta">
-    <h2>Bateu a Fome?</h2>
-    <p>Faça seu pedido agora e recebe em casa!</p>
-    <a href="https://wa.me/5547997098456?text=Ol%C3%A1%2C%20tudo%20bem%3F" class="btn btn-light">📱 Pedir pelo WhatsApp</a>
-  </section>
-  
-  <footer id="Contato">
-    <section>
-      <h3>🍔 Hamburgueria do Gabriel</h3>
-      <p>O melhor Hambúrguer artesenal da cidade</p>
-    </section>
-
-    <section>
-      <h4>Horário</h4>
-      <p>Terça a Domingo 18h às 23h </p>
-    </section>
-
-    <section>
-      <h4>Contato</h4>
-      <p>📱 (47) 999709-8456
-      📍 Rua dos hambúrgueres, 000</p>
-    </section>
-
-    <section>
-      <h4>Redes Sociais</h4>
-      <p>Instagram</p>
-    </section>
-
-    <p class="copy">© 2025 - 🍔BielBurguer</p>
-
-  </footer>
-  
+<script src="script.js"></script>
 </body>
 </html>
